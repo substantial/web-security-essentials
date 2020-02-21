@@ -17,6 +17,8 @@ module.exports = app => {
         return;
       }
       const { username, SSN } = request.session.user;
+      // 🐨 Add nonce attribute to script tag that load jQuery
+      // 💰 nonce="${response.locals.nonce}"
       response.send(`
         Hi, ${username} (${SSN})!<br>
         Today's latest messages:<br><br>

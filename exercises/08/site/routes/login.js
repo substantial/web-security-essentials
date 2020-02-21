@@ -1,7 +1,11 @@
 const users = {
-  mikesherov: {
+  substantial: {
     password: "1",
     SSN: "123-45-6789"
+  },
+  attacker: {
+    password: "1",
+    SSN: "456-78-9012"
   }
 };
 
@@ -22,6 +26,8 @@ module.exports = app => {
         response.redirect("/login");
       }
     })
+    // 🐨 Add hidden input to form with CSRF token
+    // 💰 <input type="hidden" name="_csrf" value=${request.csrfToken()}>
     .get((request, response) => {
       response.send(`
         <form action="/login" method="post">

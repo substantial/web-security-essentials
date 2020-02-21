@@ -25,6 +25,16 @@ app.use(function(req, res, next) {
   res.locals.nonce = crypto.randomBytes(16).toString("hex");
   next();
 });
+
+// 🐨 Save scriptSrc array to variable
+// 💰 Here you go:
+// const selfNonce = [
+//   "'self'",
+//   (_, res) => `'nonce-${res.locals.nonce}'`
+// ]
+
+// 🐨 Set defaultSrc to ["'none'"]
+// 🐨 Set scriptSrc, connectSrc, imgSrc & styleSrc to selfNonce
 app.use(
   helmet.contentSecurityPolicy({
     directives: {

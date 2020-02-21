@@ -1,6 +1,8 @@
 const localHost = require("https-localhost");
 const helmet = require("helmet");
 const bodyParser = require("body-parser");
+// 🐨 You'll need to import crypto
+// 💰 const crypto = require("crypto");
 const express = require("express");
 const session = require("express-session");
 const csurf = require("csurf");
@@ -20,6 +22,16 @@ app.use(
   })
 );
 
+// 🐨 Store nonce in res.locals property
+// 💰 Here you go:
+// app.use(function(req, res, next) {
+//   res.locals.nonce = crypto.randomBytes(16).toString("hex");
+//   next();
+// });
+
+// 🐨 Replace "https:" with arrow function that returns nonce
+// in scriptSrc directive
+// 💰 (_, res) => `'nonce-${res.locals.nonce}'`
 app.use(
   helmet.contentSecurityPolicy({
     directives: {

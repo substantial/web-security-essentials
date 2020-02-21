@@ -22,6 +22,18 @@ To have a productive workshop experience, please do the following:
   - [ ] [Cross-Site Request Forgery (CSRF)][csrf]
   - [ ] [The Rise of Man In The Middle (MITM) Based Session Hijacking Attacks](https://mike.sherov.com/man-in-the-middle/)
 
+## Users
+
+### Substantial
+
+- Username: substantial
+- Password: 1
+
+### Attacker
+
+- Username: attacker
+- Password: 1
+
 ## Workshop Workflow
 
 The workshop works as a series of exercises located in the `exercises` directory. We will work our way progressively through the concepts. At any point in time, if you get stuck, you can find the solution by doing `git show lesson-<lesson number>` (e.g. `git show lesson-2`) or view the solution directly in github at e.g. https://github.com/mikesherov/web-security-essentials/commit/lesson-2. If you're still stuck, don't worry! We'll move onto the next lesson, and you'll have a fresh copy of the working code to work off of.

@@ -11,7 +11,7 @@ To have a productive workshop experience, please do the following:
   ```
 - [ ] Ensure you can successfully run the code (~5 minutes)
   - [ ] Run `script/dev-setup`
-  - [ ] Go to the first exercise `cd exercises/01`
+  - [ ] Go to the first exercise `cd exercises/01-session-hijacking`
   - [ ] Run `sudo npm start`. If `sudo npm start` fails, try `nodemon ./site/index.js`
   - [ ] open http://localhost.charlesproxy.com and verify you see a login
   - [ ] Run `sudo npm run start:evil.com`. If that fails, try `node ./evil.com/index.js`
